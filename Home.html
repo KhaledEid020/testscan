@@ -74,12 +74,12 @@
             resultDiv.textContent = 'Scanning...';
 
             try {
-                const response = await fetch('http://13.53.129.215//scan', {
+                const response = await fetch('http://13.53.129.215/scan', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ url: url }),
+                    body: JSON.stringify({ target: url }),
                 });
 
                 if (!response.ok) {
